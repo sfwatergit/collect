@@ -14,13 +14,13 @@
 
 package org.odk.collect.android.widgets;
 
-import java.util.Locale;
+import android.content.Context;
+import android.util.Log;
 
 import org.javarosa.core.model.Constants;
 import org.javarosa.form.api.FormEntryPrompt;
 
-import android.content.Context;
-import android.util.Log;
+import java.util.Locale;
 
 /**
  * Convenience class that handles creation of widgets.
@@ -198,6 +198,8 @@ public class WidgetFactory {
                     questionWidget = new ListMultiWidget(context, fep, true);
                 } else if (appearance.startsWith("label")) {
                     questionWidget = new LabelWidget(context, fep);
+                } else if(appearance.startsWith("multiseekbar")) {
+                    questionWidget = new MultiSeekBarWidget(context, fep);
                 } else {
                     questionWidget = new SelectMultiWidget(context, fep);
                 }

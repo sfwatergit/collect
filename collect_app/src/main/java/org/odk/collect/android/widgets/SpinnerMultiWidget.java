@@ -14,8 +14,14 @@
 
 package org.odk.collect.android.widgets;
 
-import java.util.ArrayList;
-import java.util.List;
+import android.app.AlertDialog;
+import android.content.Context;
+import android.content.DialogInterface;
+import android.util.TypedValue;
+import android.view.View;
+import android.view.inputmethod.InputMethodManager;
+import android.widget.Button;
+import android.widget.TextView;
 
 import org.javarosa.core.model.SelectChoice;
 import org.javarosa.core.model.data.IAnswerData;
@@ -26,14 +32,8 @@ import org.javarosa.xpath.expr.XPathFuncExpr;
 import org.odk.collect.android.R;
 import org.odk.collect.android.external.ExternalDataUtil;
 
-import android.app.AlertDialog;
-import android.content.Context;
-import android.content.DialogInterface;
-import android.util.TypedValue;
-import android.view.View;
-import android.view.inputmethod.InputMethodManager;
-import android.widget.Button;
-import android.widget.TextView;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * SpinnerMultiWidget, like SelectMultiWidget handles multiple selection fields using checkboxes,

@@ -15,8 +15,9 @@ License for the specific language governing permissions and limitations under
 the License.
 -->
 <resources>
-
     <drawable name="white">#ffffffff</drawable>
     <drawable name="black">#ff000000</drawable>
-
+    <color name="mdm_blue">#FF00A0D1</color>
+    <color name="mdm_orange">#ffda7614</color>
+    <color name="mdm_grey">#AFFF</color>
 </resources>
