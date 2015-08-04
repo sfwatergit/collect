@@ -1,0 +1,131 @@
+<?xml version="1.0"?>
+<h:html xmlns="http://www.w3.org/2002/xforms" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:h="http://www.w3.org/1999/xhtml" xmlns:jr="http://openrosa.org/javarosa" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <h:head>
+    <h:title>Dav Testing</h:title>
+    <model>
+      <itext>
+        <translation default="English" lang="English">
+          <text id="yesnoYes">
+            <value form="long">Yes</value>
+            <value form="short">Yes</value>
+            <value form="image">jr://images/smile.jpg</value>
+          </text>
+          <text id="yesnoNo">
+            <value form="long">No</value>
+            <value form="short">No</value>
+            <value form="image">jr://images/frown.jpg</value>
+          </text>
+          <text id="sixChoicesc1">
+            <value form="long">C1</value>
+            <value form="short">C1</value>
+            <value form="image">jr://images/c1.jpg</value>
+          </text>
+          <text id="sixChoicesc2">
+            <value form="long">C2</value>
+            <value form="short">C2</value>
+            <value form="image">jr://images/c2.jpg</value>
+          </text>
+          <text id="sixChoicesc3">
+            <value form="long">C3</value>
+            <value form="short">C3</value>
+            <value form="image">jr://images/c3.jpg</value>
+          </text>
+          <text id="sixChoicesc4">
+            <value form="long">C4</value>
+            <value form="short">C4</value>
+            <value form="image">jr://images/c4.jpg</value>
+          </text>
+          <text id="sixChoicesc5">
+            <value form="long">C5</value>
+            <value form="short">C5</value>
+            <value form="image">jr://images/c5.jpg</value>
+          </text>
+          <text id="sixChoicesc6">
+            <value form="long">C6</value>
+            <value form="short">C6</value>
+            <value form="image">jr://images/c6.jpg</value>
+          </text>
+        </translation>
+      </itext>
+      <instance>
+        <DavTesting id="DavTesting">
+          <id/>
+          <vas/>
+          <motivation/>
+          <lumosity/>
+        </DavTesting>
+      </instance>
+      <bind nodeset="/DavTesting/id" type="string"/>
+      <bind nodeset="/DavTesting/vas" type="select"/>
+      <bind nodeset="/DavTesting/motivation" type="string"/>
+      <bind nodeset="/DavTesting/lumosity" type="string" readonly="true()"/>
+    </model>
+  </h:head>
+  <h:body>
+    <input ref="/DavTesting/id" appearance="numbers">
+      <label>ID</label>
+    </input>
+
+    <select ref="/DavTesting/vas" appearance="multiseekbar">
+        <!-- Android should support <font>, but JavaRosa appears to strip it
+             out, so this doesn't work:
+             <label>現在の<font color="FireBrick">「あなたの状態を」</font>以下のスライダーであらわすこととしたとき、 -->
+      <label>現在の「あなたの状態を」以下のスライダーであらわすこととしたとき、
+             スライダー上でもっともふさわしいと思う部分をタップしてください。</label>
+      <item>
+        <label>今、意識がはっきりしていますか？</label>
+        <value>0,100,全くはっきりしていない,とてもはっきりしている</value>
+      </item>
+      <item>
+        <label>今、頭の回転がスムーズですか？</label>
+        <value>0,100,全くスムーズでない,とてもスムーズである</value>
+      </item>
+      <item>
+        <label>今、眠いですか？</label>
+        <value>0,100,全く眠くない,とても眠い</value>
+      </item>
+      <item>
+        <label>今、幸せですか？</label>
+        <value>0,100,全く幸せでない,とても幸せである</value>
+      </item>
+      <item>
+        <label>今、悲しいですか？</label>
+        <value>0,100,全く悲しくない,とても悲しい</value>
+      </item>
+      <item>
+        <label>今、緊張していますか？</label>
+        <value>0,100,全く緊張していない,とても緊張している</value>
+      </item>
+      <item>
+        <label>今、落ち着いていますか？</label>
+        <value>0,100,全く落ち着いていない,とても落ち着いている</value>
+      </item>
+      <item>
+        <label>今、何かをする（注：どんなことでもかまいません）としたら、大変だと感じますか？</label>
+        <value>0,100,全く大変と感じない,とても大変と感じる</value>
+      </item>
+      <item>
+        <label>今、疲れていますか？</label>
+        <value>0,100,全く疲れていない,とても疲れている</value>
+      </item>
+      <item>
+        <label>今、（前と比べ）よりよい結果を出せると思いますか？</label>
+        <value>0,100,全くそう思わない,とてもそう思う</value>
+      </item>
+      <item>
+        <label>今、やる気を感じていますか？</label>
+        <value>0,100,全く感じていない,とても感じている</value>
+      </item>
+    </select>
+
+    <input ref="/DavTesting/motivation">
+      <label>今までの中で、先生のどのような言葉や話が、やる気につながっていますか？</label>
+    </input>
+
+    <input ref="/DavTesting/lumosity">
+        <label>Probably want to change to say "After finalizing the survey..."
+            次は、「落ち葉フロー」「渡り鳥ファミリー」「図形スピードマッチ」という3つのゲームにチャレンジしていきましょう！
+　ゲームが終了したら、タブレットの電源を切って下さい。</label>
+    </input>
+  </h:body>
+</h:html>
