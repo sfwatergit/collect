@@ -83,6 +83,7 @@ public class VideoWidget extends QuestionWidget implements IBinaryWidget {
 
 		setOrientation(LinearLayout.VERTICAL);
 
+
 		TableLayout.LayoutParams params = new TableLayout.LayoutParams();
 		params.setMargins(7, 5, 7, 5);
 		// setup capture button
