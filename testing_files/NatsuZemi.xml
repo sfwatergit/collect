@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <h:html xmlns="http://www.w3.org/2002/xforms" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:h="http://www.w3.org/1999/xhtml" xmlns:jr="http://openrosa.org/javarosa" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <h:head>
-    <h:title>Let's Start!</h:title>
+    <h:title>Let's Start ODK!</h:title>
     <model>
       <itext>
         <translation default="English" lang="English">
@@ -48,78 +48,85 @@
         </translation>
       </itext>
       <instance>
-        <DavTesting id="NatsuZemi2015">
+        <NatsuZemi2015 id="NatsuZemiSurvey2015">
           <id/>
-          <vas/>
+          <vas1/>
+          <vas2/>
           <motivation/>
           <!-- <lumosity/> -->
-        </DavTesting>
+        </NatsuZemi2015>
       </instance>
       <bind nodeset="/NatsuZemi2015/id" type="string"/>
-      <bind nodeset="/NatsuZemi2015/vas" type="select"/>
+      <bind nodeset="/NatsuZemi2015/vas1" type="select"/>
+      <bind nodeset="/NatsuZemi2015/vas2" type="select"/>
       <bind nodeset="/NatsuZemi2015/motivation" type="string"/>
       <!-- <bind nodeset="/NatsuZemi2015/lumosity" type="string" readonly="true()"/> -->
     </model>
   </h:head>
   <h:body>
-    <input ref="/DavTesting/id" appearance="numbers">
+    <input ref="/NatsuZemi2015/id" appearance="numbers">
       <label>ID</label>
     </input>
 
-    <select ref="/DavTesting/vas" appearance="multiseekbar">
+    <select ref="/NatsuZemi2015/vas1" appearance="multiseekbar">
         <!-- Android should support <font>, but JavaRosa appears to strip it
              out, so this doesn't work:
              <label>現在の<font color="FireBrick">「あなたの状態を」</font>以下のスライダーであらわすこととしたとき、 -->
       <label>現在の「あなたの状態を」以下のスライダーであらわすこととしたとき、
 もっともふさわしいと思う部分をゆっくりとタッチしてください。</label>
       <item>
-        <label>今、意識がはっきりしていますか？</label>
+        <label>1. 今、意識がはっきりしていますか？</label>
         <value>0,100,全くはっきりしていない,とてもはっきりしている</value>
       </item>
       <item>
-        <label>今、頭の回転がスムーズですか？</label>
+        <label>2. 今、頭の回転がスムーズですか？</label>
         <value>0,100,全くスムーズでない,とてもスムーズである</value>
       </item>
       <item>
-        <label>今、眠いですか？</label>
+        <label>3. 今、眠いですか？</label>
         <value>0,100,全く眠くない,とても眠い</value>
       </item>
       <item>
-        <label>今、幸せですか？</label>
+        <label>4. 今、幸せですか？</label>
         <value>0,100,全く幸せでない,とても幸せである</value>
       </item>
       <item>
-        <label>今、悲しいですか？</label>
+        <label>5. 今、悲しいですか？</label>
         <value>0,100,全く悲しくない,とても悲しい</value>
       </item>
       <item>
-        <label>今、緊張していますか？</label>
+        <label>6. 今、緊張していますか？</label>
         <value>0,100,全く緊張していない,とても緊張している</value>
       </item>
+    </select>
+
+    <select ref="/NatsuZemi2015/vas2" appearance="multiseekbar">
+      <label>現在の「あなたの状態を」以下のスライダーであらわすこととしたとき、
+もっともふさわしいと思う部分をゆっくりとタッチしてください。</label>
       <item>
-        <label>今、落ち着いていますか？</label>
+        <label>7. 今、落ち着いていますか？</label>
         <value>0,100,全く落ち着いていない,とても落ち着いている</value>
       </item>
       <item>
-        <label>今、何かをする（注：どんなことでもかまいません）としたら、大変だと感じますか？</label>
+        <label>8. 今、何かをする（注：どんなことでもかまいません）としたら、大変だと感じますか？</label>
         <value>0,100,全く大変と感じない,とても大変と感じる</value>
       </item>
       <item>
-        <label>今、疲れていますか？</label>
+        <label>9. 今、疲れていますか？</label>
         <value>0,100,全く疲れていない,とても疲れている</value>
       </item>
       <item>
-        <label>今、（前と比べ）よりよい結果を出せると思いますか？</label>
+        <label>10. 今、（前と比べ）よりよい結果を出せると思いますか？</label>
         <value>0,100,全くそう思わない,とてもそう思う</value>
       </item>
       <item>
-        <label>今、やる気を感じていますか？</label>
+        <label>11. 今、やる気を感じていますか？</label>
         <value>0,100,全く感じていない,とても感じている</value>
       </item>
     </select>
 
-    <input ref="/DavTesting/motivation">
-        <label>ここまでで、先生のどのような言葉や話が、やる気につながっていますか？
+    <input ref="/NatsuZemi2015/motivation">
+        <label>12. ここまでで、先生のどのような言葉や話が、やる気につながっていますか？
 絵文字を使わずに書きましょう。</label>
     </input>
 
