@@ -71,7 +71,7 @@
              out, so this doesn't work:
              <label>現在の<font color="FireBrick">「あなたの状態を」</font>以下のスライダーであらわすこととしたとき、 -->
       <label>現在の「あなたの状態を」以下のスライダーであらわすこととしたとき、
-             スライダー上でもっともふさわしいと思う部分をタップしてください。</label>
+             スライダー上でもっともふさわしいと思う部分をゆっくりとタッチしてください。</label>
       <item>
         <label>今、意識がはっきりしていますか？</label>
         <value>0,100,全くはっきりしていない,とてもはっきりしている</value>
@@ -119,7 +119,7 @@
     </select>
 
     <input ref="/DavTesting/motivation">
-      <label>今までの中で、先生のどのような言葉や話が、やる気につながっていますか？</label>
+      <label>今までの中で、先生のどのような言葉や話が、やる気につながっていますか？絵文字は使わないで下さい。</label>
     </input>
 
 <!--     <input ref="/DavTesting/lumosity"> -->
