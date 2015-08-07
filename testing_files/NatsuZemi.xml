@@ -71,7 +71,7 @@
              out, so this doesn't work:
              <label>現在の<font color="FireBrick">「あなたの状態を」</font>以下のスライダーであらわすこととしたとき、 -->
       <label>現在の「あなたの状態を」以下のスライダーであらわすこととしたとき、
-             スライダー上でもっともふさわしいと思う部分をゆっくりとタッチしてください。</label>
+もっともふさわしいと思う部分をゆっくりとタッチしてください。</label>
       <item>
         <label>今、意識がはっきりしていますか？</label>
         <value>0,100,全くはっきりしていない,とてもはっきりしている</value>
@@ -119,13 +119,9 @@
     </select>
 
     <input ref="/DavTesting/motivation">
-      <label>今までの中で、先生のどのような言葉や話が、やる気につながっていますか？絵文字は使わないで下さい。</label>
+        <label>ここまでで、先生のどのような言葉や話が、やる気につながっていますか？
+絵文字を使わずに書きましょう。</label>
     </input>
 
-<!--     <input ref="/DavTesting/lumosity"> -->
-<!--         <label>Probably want to change to say "After finalizing the survey..." -->
-<!--             次は、「落ち葉フロー」「渡り鳥ファミリー」「図形スピードマッチ」という3つのゲームにチャレンジしていきましょう！ -->
-<!-- 　ゲームが終了したら、タブレットの電源を切って下さい。</label> -->
-<!--     </input> -->
   </h:body>
 </h:html>
